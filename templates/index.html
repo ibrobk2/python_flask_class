@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask Homepage</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if x!='John' %}
+
+            <h2>Welcome, Customer to Flask Homepage</h2>
+        {% else %}
+            <h2>Welcome, {{x}} to Flask Homepage</h2>
+        {% endif %}
+
+        <h3>Your Family Members are:</h3>
+        {% for member in family %}
+            <ul>{{member}}</ul>
+        {% endfor %}
+    </div>
+</body>
+</html>
